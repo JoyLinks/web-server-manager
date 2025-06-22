@@ -1,0 +1,45 @@
+<dialog class="w38 ssm" aria-modal="true">
+	<div id="black" class="head hc hms ps">
+		<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+			<use xlink:href="#i-black" />
+		</svg>
+		<span case="black">新建黑名单</span>
+	</div>
+	<div id="white" class="head hc hms ps">
+		<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+			<use xlink:href="#i-white" case="white" />
+		</svg>
+		<span case="white">新建白名单</span>
+	</div>
+	<form class="pm" method="dialog">
+		<div class="h">
+			<label for="address">网络地址：</label>
+			<input id="address" class="g dark" type="text" name="address" maxlength="64" required placeholder="192.168.0.1" />
+		</div>
+		<div class="h">
+			<label for="status">响应代码：</label>
+			<input id="status" class="g dark" type="number" name="status" min="400" max="999" maxlength="8" placeholder="403" />
+		</div>
+		<div class="h">
+			<label for="text">响应消息：</label>
+			<input id="text" class="g dark" type="text" name="text" maxlength="256" placeholder="Forbidden" />
+		</div>
+		<div class="h">
+			<label for="hosts">指定主机：</label>
+			<input id="hosts" class="g dark" type="text" name="hosts" list="names" maxlength="256" placeholder="逗号分隔的多个主机名" />
+			<datalist id="names">
+				<option case="name"></option>
+			</datalist>
+		</div>
+		<div id="black" style="padding-left:6rem;">
+			<small>阻止地址访问指定主机，未设置时全局阻止。</small>
+		</div>
+		<div id="white" style="padding-left:6rem;">
+			<small>仅允许指定地址访问主机，未设置时覆盖全局。</small>
+		</div>
+		<div class="tr">
+			<button class="secondary" type="reset" formnovalidate>取消</button>
+			<button class="primary" type="submit">创建</button>
+		</div>
+	</form>
+</dialog>

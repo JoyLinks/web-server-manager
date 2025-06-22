@@ -1,0 +1,34 @@
+{
+	"name": "WEBDAV Client",
+	"version": "1.0.0",
+	"description": "WEBDAV HTML Client",
+	"main": "index.js",
+	"scripts": {
+		"debug": "webpack serve --open",
+		"build": "webpack --mode=production"
+	},
+	"keywords": [
+		"WEBDAV"
+	],
+	"author": "JOYZL",
+	"license": "Apache",
+	"devDependencies": {
+		"@joyzl/html-include-loader": "^1.0.1",
+		"copy-webpack-plugin": "^13.0.0",
+		"css-loader": "^7.1.2",
+		"css-minimizer-webpack-plugin": "^7.0.2",
+		"html-loader": "^5.1.0",
+		"html-webpack-plugin": "^5.6.3",
+		"mini-css-extract-plugin": "^2.9.2",
+		"postcss-loader": "^8.1.1",
+		"style-loader": "^4.0.0",
+		"webpack": "^5.99.8",
+		"webpack-cli": "^6.0.1",
+		"webpack-dev-server": "^5.2.1"
+	},
+	"dependencies": {
+		"@joyzl/eno": "^1.2.10",
+		"@joyzl/style": "^1.2.8",
+		"axios": "^1.9.0"
+	}
+}

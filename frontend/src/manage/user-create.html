@@ -1,0 +1,36 @@
+<dialog class="w38 ssm" aria-modal="true">
+	<div class="head hc hms ps">
+		<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+			<use xlink:href="#i-user" />
+		</svg>
+		<span>新建用户账号</span>
+	</div>
+	<form class="pm" method="dialog">
+		<div class="h">
+			<label for="name">　登录名：</label>
+			<input id="name" class="g dark" type="text" name="name" maxlength="64" required />
+		</div>
+		<div class="h">
+			<label for="password">登录密码：</label>
+			<input id="password" class="g dark" type="password" name="password" maxlength="64" required />
+		</div>
+		<div class="h">
+			<label for="confirm">确认密码：</label>
+			<input id="confirm" class="g dark" type="password" name="confirm" maxlength="64" required />
+		</div>
+		<div class="h">
+			<label for="uris">资源范围：</label>
+			<input id="uris" class="g dark" type="text" name="uris" list="paths" maxlength="256" placeholder="逗号分隔的多个资源路径" />
+			<datalist id="paths">
+				<option case="path">/</option>
+			</datalist>
+		</div>
+		<div style="padding-left:6rem;">
+			<small>用户只能访问指定范围的资源，未设置时无限制。</small>
+		</div>
+		<div class="tr">
+			<button class="secondary" type="reset" formnovalidate>取消</button>
+			<button class="primary" type="submit">创建</button>
+		</div>
+	</form>
+</dialog>

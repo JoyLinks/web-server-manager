@@ -1,0 +1,21 @@
+<dialog class="w38 ssm" aria-modal="true">
+	<div class="head hc hms ps">
+		<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+			<use xlink:href="#i-apply" />
+		</svg>
+		<span>应用配置</span>
+	</div>
+	<form class="pm" method="dialog">
+		<p>将当前服务配置上载到服务器并应用你所做的修改，所有的配置将立即生效(无须手动重启)。</p>
+		<p id="nochange" class="text warning">
+			<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+				<use xlink:href="#a-info" />
+			</svg>
+			当前配置视乎没有任何修改，您依然可以执行上载。
+		</p>
+		<div class="tr">
+			<button class="secondary" type="reset" formnovalidate>取消</button>
+			<button class="primary" type="submit">上载并应用</button>
+		</div>
+	</form>
+</dialog>

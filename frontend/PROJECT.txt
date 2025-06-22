@@ -1,0 +1,22 @@
+JOYZL HTTP WEB Server manager \ frontend
+
+项目构建
+
+npm init -y
+
+npm install --save @joyzl/style
+npm install --save @joyzl/eno
+
+npm install --save-dev style-loader css-loader postcss-loader
+npm install --save-dev html-loader
+npm install --save-dev html-webpack-plugin
+npm install --save-dev mini-css-extract-plugin
+npm install --save-dev css-minimizer-webpack-plugin
+npm install --save-dev @joyzl/html-include-loader
+npm install --save-dev webpack webpack-cli
+npm install --save-dev webpack-dev-server
+npm install --save-dev copy-webpack-plugin
+
+npm install bootstrap-icons
+npm install echarts
+npm install axios

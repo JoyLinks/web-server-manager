@@ -1,0 +1,174 @@
+<div>
+	<div class="head v vm1">
+		<div class="title hc ps">
+			<div class="g hc hms t3">
+				<svg width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 16 16">
+					<use xlink:href="#i-visits" />
+				</svg>
+				<span name="name"></span>
+				<span>访问日志分析</span>
+			</div>
+			<mark id="close" class="hc hms dark hover">
+				<span>关闭并返回</span>
+			</mark>
+		</div>
+		<nav class="h hmm">
+			<div class="hc hms ps hover" target="data">
+				<span>数据</span>
+			</div>
+			<div class="hc hms ps hover" target="hours">
+				<span>时段</span>
+			</div>
+			<div class="hc hms ps hover" target="methods">
+				<span>请求方法</span>
+			</div>
+			<div class="hc hms ps hover" target="status">
+				<span>响应状态</span>
+			</div>
+			<div class="hc hms ps hover" target="versions">
+				<span>协议版本</span>
+			</div>
+			<div class="hc hms ps hover" target="servlets">
+				<span>服务程序</span>
+			</div>
+			<div class="hc hms ps hover" target="resources">
+				<span>资源</span>
+			</div>
+			<div class="hc hms ps hover" target="addresses">
+				<span>地址</span>
+			</div>
+			<div class="hc hms ps hover" target="files">
+				<span>日志</span>
+			</div>
+		</nav>
+	</div>
+	<div>
+		<div id="reading" class="ps">正在读取日志，请稍后...</div>
+		<div id="files">
+			<div class="h hms item">
+				<div class="w60">
+					<span name="name"></span>
+				</div>
+				<div class="g">
+					<span name="total"></span>
+				</div>
+				<span name="bytes"></span>
+			</div>
+		</div>
+		<div id="data">
+			<div class="h hms item">
+				<span>请求数据量：</span>
+				<span name="request"></span>
+				<small>(仅请求体)</small>
+			</div>
+			<div class="h hms item">
+				<span>响应数据量：</span>
+				<span name="response"></span>
+				<small>(仅响应体)</small>
+			</div>
+			<div class="h hms item">
+				<span>总请求数：</span>
+				<span name="total"></span>
+			</div>
+			<div class="h hms item">
+				<span>日志错误：</span>
+				<span name="errors"></span>
+			</div>
+			<div class="ps">
+				<small>仅读取近7日的日志记录</small>
+			</div>
+		</div>
+		<div id="hours">
+			<div class="h hms item">
+				<span name="name"></span>
+				<div class="g h hms">
+					<span class="success tr" case="bar"></span>
+					<span name="total"></span>
+				</div>
+				<span name="p"></span>
+			</div>
+		</div>
+		<div id="versions">
+			<div class="h hms item">
+				<span class="w10 tr" name="name"></span>
+				<div class="g h hms">
+					<span class="success tr" case="bar"></span>
+					<span name="total"></span>
+				</div>
+				<span name="p"></span>
+			</div>
+		</div>
+		<div id="servlets">
+			<div class="h hms item">
+				<span class="w10 tr" name="name"></span>
+				<div class="w60 h hms">
+					<span class="success tr" case="bar"></span>
+					<span name="total"></span>
+				</div>
+				<span class="w5" name="p"></span>
+				<div class="g">
+					<span name="max"></span>ms/<span name="time"></span>ms
+				</div>
+				<span class="text danger" name="error" title="ERROR"></span>
+			</div>
+		</div>
+		<div id="methods">
+			<div class="h hms item">
+				<span class="w10 tr" name="name"></span>
+				<div class="g h hms">
+					<span class="success tr" case="bar"></span>
+					<span name="total"></span>
+				</div>
+				<span name="p"></span>
+			</div>
+		</div>
+		<div id="status">
+			<div class="h hms item">
+				<span name="name"></span>
+				<div class="g h hms">
+					<span class="success tr" case="bar"></span>
+					<span name="total"></span>
+				</div>
+				<span name="p"></span>
+			</div>
+		</div>
+
+		<div id="resources">
+			<template>
+				<div class="h hms item">
+					<span class="w50" name="name"></span>
+					<div class="g h hms">
+						<span class="success tr" case="bar"></span>
+						<span name="total"></span>
+					</div>
+					<span name="p"></span>
+				</div>
+			</template>
+			<div class="ps">
+				<small>
+					<span>仅显示前200</span>
+					总<span name="resources"></span>
+				</small>
+			</div>
+		</div>
+		<div id="addresses">
+			<template>
+				<div class="h hms item">
+					<span name="name"></span>
+					<div class="g h hms">
+						<span class="success tr" case="bar"></span>
+						<span name="total"></span>
+					</div>
+					<span name="p"></span>
+				</div>
+			</template>
+			<div class="ps">
+				<small>
+					<span>仅显示前200</span>
+					总<span name="addresses"></span>
+				</small>
+			</div>
+		</div>
+
+	</div>
+</div>

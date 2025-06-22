@@ -1,0 +1,49 @@
+<dialog class="w38 ssm" aria-modal="true">
+	<div class="head hc hms ps">
+		<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+			<use xlink:href="#i-host" />
+		</svg>
+		<span case="black">新建身份验证</span>
+	</div>
+	<form class="pm" method="dialog">
+		<div class="hc">
+			<label for="type">验证类型：</label>
+			<select id="type" class="g dark" name="type" required>
+				<option value="Basic">Basic(基本身份认证)</option>
+				<option value="Digest">Digest(摘要访问认证)</option>
+				<option value="Deny">Deny(禁止)</option>
+				<option value="None">None(无认证)</option>
+			</select>
+		</div>
+		<div class="hc">
+			<label for="realm">领域提示：</label>
+			<input id="realm" class="g dark" type="text" name="realm" value="Protected Area" maxlength="64" title="验证领域提示信息" required />
+		</div>
+		<div class="hc">
+			<label for="path">资源路径：</label>
+			<input id="path" class="g dark" type="text" name="path" list="paths" placeholder="/" maxlength="256" title="须身份验证的资源路径" required />
+			<datalist id="paths">
+				<option case="path">/</option>
+			</datalist>
+		</div>
+		<div style="padding-left:6rem;">
+			<small>指定需要验证的资源路径，未设置时全部验证。</small>
+		</div>
+		<div class="hc">
+			<label for="methods">请求方法：</label>
+			<input id="methods" class="g dark" type="text" name="methods" list="m" maxlength="256" title="逗号分隔多个方法" />
+			<datalist id="m">
+				<option value="HEAD,GET,PUT,POST,PATCH,DELETE"></option>
+				<option value="PROPFIND,PROPPATCH,MKCOL,DELETE,GET,PUT,COPY,MOVE,LOCK,UNLOCK">WEBDAV</option>
+			</datalist>
+		</div>
+		<div style="padding-left:6rem;">
+			<small>指定需要验证的请求方法，未设置时全部验证。</small>
+		</div>
+
+		<div class="tr">
+			<button class="secondary" type="reset" formnovalidate>取消</button>
+			<button class="primary" type="submit">创建</button>
+		</div>
+	</form>
+</dialog>

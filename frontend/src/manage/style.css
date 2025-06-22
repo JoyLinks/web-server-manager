@@ -1,0 +1,111 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: #BFBFBF;
+	background-color: #191919;
+}
+
+svg {
+	vertical-align: middle;
+}
+
+aside {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	position: fixed;
+	border-right: #2B2B2B solid 1px;
+	box-sizing: border-box;
+	user-select: none;
+	width: 18rem;
+}
+
+aside .head {
+	/*
+	color: #76B900;
+	border-bottom: #76B900 solid 3px;
+	background-color: black;
+	 */
+	color: white;
+	border-bottom: #2B2B2B solid 1px;
+}
+
+aside svg {
+	fill: #76B900;
+}
+
+aside .selected {
+	background-color: inherit;
+}
+
+aside .selected>.t,
+aside .selected>div>.t {
+	display: block;
+}
+
+aside .t {
+	color: #76B900;
+	display: none;
+}
+
+/*
+服务器和虚拟主机为2级
+*/
+aside .servers.selected .select>.t,
+aside .servers.selected .select>div>.t {
+	display: block;
+}
+
+aside .hosts {
+	padding-left: 2rem;
+}
+
+main {
+	margin-left: 18rem;
+}
+
+main .head {
+	top: 0;
+	color: white;
+	position: sticky;
+}
+
+main .title {
+	background-color: #292929;
+}
+
+main .item {
+	padding: 0.5rem;
+	border-bottom: #2B2B2B solid 1px;
+}
+
+main .item:hover {
+	background-color: #222222;
+}
+
+main nav {
+	user-select: none;
+	background-color: #292929;
+}
+
+main nav .selected {
+	background-color: #191919;
+}
+
+dialog {
+	border: none;
+	color: #BFBFBF;
+	padding: 0;
+	background-color: #292929;
+}
+
+dialog .head {
+	border-bottom: #191919 solid 1px;
+	background-color: #292929;
+}
+
+.servers {}
+
+.hosts {
+	padding-left: 2rem;
+}

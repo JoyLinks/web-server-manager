@@ -1,0 +1,39 @@
+<dialog class="w38 ssm" aria-modal="true">
+	<div class="head hc hms ps">
+		<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+			<use xlink:href="#i-host" />
+		</svg>
+		<span case="black">身份验证设置</span>
+	</div>
+	<form class="pm" method="dialog">
+		<div class="hc">
+			<label>验证类型：</label>
+			<span name="type"></span>
+		</div>
+		<div class="hc">
+			<label for="realm">领域提示：</label>
+			<input id="realm" class="g dark" type="text" name="realm" maxlength="64" title="未验证时提示信息" required />
+		</div>
+		<div class="hc">
+			<label for="path">资源路径：</label>
+			<input id="path" class="g dark" type="text" name="path" list="paths" maxlength="256" placeholder="/" title="须身份验证的资源路径" required />
+			<datalist id="paths">
+				<option case="path">/</option>
+			</datalist>
+		</div>
+		<div style="padding-left:6rem;">
+			<small>指定需要验证的资源路径，未设置时全部验证。</small>
+		</div>
+		<div class="hc">
+			<label for="methods">请求方法：</label>
+			<input id="methods" class="g dark" type="text" name="methods" maxlength="64" title="逗号分隔多个方法" />
+		</div>
+		<div style="padding-left:6rem;">
+			<small>指定需要验证的请求方法，未设置时全部验证。</small>
+		</div>
+		<div class="tr">
+			<button class="secondary" type="reset" formnovalidate>取消</button>
+			<button class="primary" type="submit">修改</button>
+		</div>
+	</form>
+</dialog>

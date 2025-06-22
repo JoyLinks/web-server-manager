@@ -1,0 +1,143 @@
+<fieldset id="RESOURCE">
+	<legend>资源服务</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="*" />
+	</div>
+	<div style="padding-left:6rem;">
+		<small>可使用单个通配符'*'，未设置时匹配所有路径。</small>
+	</div>
+	<div class="hc">
+		<label for="content">文件目录：</label>
+		<input id="content" class="g dark" type="text" name="content" maxlength="256" required title="文件所在目录" />
+	</div>
+	<div class="hc">
+		<label for="cache">缓存目录：</label>
+		<input id="cache" class="g dark" type="text" name="cache" maxlength="256" title="压缩文件缓存目录，未指定时由系统默认" />
+	</div>
+	<div class="hc">
+		<label for="error">错误页面：</label>
+		<input id="error" class="g dark" type="text" name="error" maxlength="256" title="错误页面所在目录，其中有错误代码对应的文件，例如：404.html" />
+	</div>
+	<div class="hc">
+		<label for="defaults">默认页面：</label>
+		<input id="defaults" class="g dark" type="text" name="defaults" maxlength="256" placeholder="index.html,default.html" title="访问目录时的默认页面文件名称" />
+	</div>
+	<div class="hc">
+		<label for="compresses">压缩文件：</label>
+		<input id="compresses" class="g dark" type="text" name="compresses" maxlength="256" placeholder=".html,.htm,.css,.js,.json,.svg,.xml" title="文件将压缩提高传输速度，可逗号分隔多个文件扩展名" />
+	</div>
+	<div class="hc">
+		<label for="caches">缓存文件：</label>
+		<input id="caches" class="g dark" type="text" name="caches" maxlength="256" placeholder=".html,.htm,.css,.js,.json,.svg,.jpg,.jpeg,.png,.gif,.ttf,.woff,.woff2" title="文件将在内存缓存提高响应速度，可逗号分隔多个文件扩展名" />
+	</div>
+	<div class="hc" title="浏览器通过标识符判断资源是否改变，而决定如何更新本地缓存">
+		<label for="weak">资源标识：</label>
+		<input id="weak" class="dark" type="radio" name="weak" value="true" checked />
+		<label for="weak">弱验证器（快速）</label>
+		<input id="strong" class="dark" type="radio" name="weak" value="false" />
+		<label for="strong">强验证器（较慢）</label>
+	</div>
+	<div class="hc">
+		<label for="browsable">浏览资源：</label>
+		<input id="browsable" class="dark" type="checkbox" name="browsable" value="true" />
+		<label for="browsable">允许显示文件列表（未能定位默认页面时）</label>
+	</div>
+	<div class="hc">
+		<label for="editable">编辑资源：</label>
+		<input id="editable" class="dark" type="checkbox" name="editable" value="true" />
+		<label for="editable">允许编辑文件<span class="text danger">（危险）</span></label>
+	</div>
+</fieldset>
+<fieldset id="WEBDAV">
+	<legend>文件服务</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="*" />
+	</div>
+	<div style="padding-left:6rem;">
+		<small>可使用单个通配符'*'，未设置时匹配所有路径。</small>
+	</div>
+	<div class="hc">
+		<label for="content">文件目录：</label>
+		<input id="content" class="g dark" type="text" name="content" maxlength="256" required title="文件所在目录" />
+	</div>
+	<div class="hc">
+		<label for="allProperty">所有属性：</label>
+		<input id="allProperty" class="dark" type="checkbox" name="allProperty" />
+		<label for="allProperty">允许读取系统支持的所有文件属性</label>
+	</div>
+</fieldset>
+<fieldset id="LOCATION">
+	<legend>重定向</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="*" />
+	</div>
+	<div style="padding-left:6rem;">
+		<small>可使用单个通配符'*'，未设置时匹配所有路径。</small>
+	</div>
+	<div class="hc">
+		<label for="location">跳转目标：</label>
+		<input id="location" class="g dark" type="text" name="location" maxlength="256" required title="重定向的目标，可以是路径或完整URL" />
+	</div>
+	<div class="hc">
+		<label for="status">响应代码：</label>
+		<input id="status" class="g dark" type="text" name="status" maxlength="256" list="codes" placeholder="301" />
+		<datalist id="codes">
+			<option value="301">301 Permanent</option>
+			<option value="302">302 Found</option>
+			<option value="307">307 Temporary</option>
+			<option value="308">308 Permanent Redirect</option>
+		</datalist>
+	</div>
+</fieldset>
+<fieldset id="SETTING">
+	<legend>服务配置</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="/manage/api/setting" />
+	</div>
+</fieldset>
+<fieldset id="VISITS">
+	<legend>访问计数</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="/manage/api/visits" />
+	</div>
+</fieldset>
+<fieldset id="ROSTER">
+	<legend>黑白名单</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="/manage/api/roster" />
+	</div>
+</fieldset>
+<fieldset id="USER">
+	<legend>用户账户</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="/manage/api/user" />
+	</div>
+</fieldset>
+<fieldset id="LOG">
+	<legend>访问日志</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="/manage/api/log/*" />
+	</div>
+</fieldset>
+<fieldset id="IP">
+	<legend>客户端IP</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="/manage/api/ip" />
+	</div>
+</fieldset>
+<fieldset id="EMOJI">
+	<legend>Unicode emoji test</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="/emoji" />
+	</div>
+</fieldset>

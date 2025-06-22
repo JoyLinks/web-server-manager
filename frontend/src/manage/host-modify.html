@@ -1,0 +1,29 @@
+<dialog class="w38 ssm" aria-modal="true">
+	<div class="head hc hms ps">
+		<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+			<use xlink:href="#i-host" />
+		</svg>
+		<span case="black">虚拟主机设置</span>
+	</div>
+	<form class="pm" method="dialog">
+		<div class="hc">
+			<label for="name">主机名称：</label>
+			<input id="name" class="g dark" type="text" name="name" maxlength="64" title="用于管理的名称" required />
+		</div>
+		<div class="hc">
+			<label for="names">绑定域名：</label>
+			<input id="names" class="g dark" type="text" name="names" maxlength="256" placeholder="www.joyzl.com" title="逗号分隔多个域名" required />
+		</div>
+		<div class="hc">
+			<label for="access">访问日志：</label>
+			<input id="access" class="g dark" type="text" name="access" maxlength="64" placeholder="不记录" title="访问日志存储位置" />
+		</div>
+		<div style="padding-left:6rem;">
+			<small>支持绝对路径和相对路径(程序目录)，未设置时不记录。</small>
+		</div>
+		<div class="tr">
+			<button class="secondary" type="reset" formnovalidate>取消</button>
+			<button class="primary" type="submit">修改</button>
+		</div>
+	</form>
+</dialog>

@@ -1,0 +1,66 @@
+<div>
+	<div class="head v vm1">
+		<div class="title hc">
+			<div id="server" class="hc hms t3 ps">
+				<svg width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 16 16">
+					<use xlink:href="#i-white" />
+				</svg>
+				<span>阻止或允许</span>
+				<span name="size"></span>
+			</div>
+		</div>
+		<nav class="hc hmm unselect">
+			<div class="hc hms ps selected" target="#blacks">
+				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+					<use xlink:href="#i-black" />
+				</svg>
+				<span>黑名单</span>
+				<span name="blacks"></span>
+			</div>
+			<div class="hc hms ps hover" target="#whites">
+				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+					<use xlink:href="#i-white" />
+				</svg>
+				<span>白名单</span>
+				<span name="whites"></span>
+			</div>
+			<div class="g"></div>
+			<div id="create" class="hc ps hover">
+				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+					<use xlink:href="#i-create" />
+				</svg>
+				<span>新建</span>
+			</div>
+		</nav>
+	</div>
+	<div id="card">
+		<div id="blacks">
+			<div class="hc hms ps item hover">
+				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+					<use xlink:href="#i-black" />
+				</svg>
+				<span class="w15" name="address"></span>
+				<span class="g" name="hosts"></span>
+				<span name="status"></span>
+				<span class="w10" name="text"></span>
+				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16" case="delete">
+					<use id="d" xlink:href="#i-delete" />
+				</svg>
+			</div>
+		</div>
+		<div id="whites">
+			<div class="hc hms ps item hover">
+				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+					<use xlink:href="#i-white" />
+				</svg>
+				<span class="w15" name="address"></span>
+				<span class="g" name="hosts"></span>
+				<span name="status"></span>
+				<span class="w10" name="text"></span>
+				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16" case="delete">
+					<use id="d" xlink:href="#i-delete" />
+				</svg>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #191919;
+}
+
+.file {}
+
+.file .file {
+	display: inline-block;
+}
+
+.file .folder {
+	display: none;
+}
+
+.folder {}
+
+.folder .file {
+	display: none;
+}
+
+.folder .folder {
+	display: inline-block;
+}
+
+.paths {}
+
+.paths a:after {
+	content: '　/';
+}

@@ -1,0 +1,41 @@
+<dialog class="w38 ssm" aria-modal="true">
+	<div class="head hc hms ps">
+		<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
+			<use xlink:href="#i-server" />
+		</svg>
+		<span case="black">主服务设置</span>
+	</div>
+	<form class="pm" method="dialog">
+		<div class="hc">
+			<label for="name">服务名称：</label>
+			<input id="name" class="g dark" type="text" name="name" maxlength="64" title="用于管理的名称" required />
+		</div>
+		<div class="hc">
+			<label for="type">服务类型：</label>
+			<select id="type" class="g dark" name="type" required>
+				<option>HTTP</option>
+				<option>HTTPS</option>
+			</select>
+		</div>
+		<div class="hc">
+			<label for="port">监听端口：</label>
+			<input id="port" class="g dark" type="number" name="port" min="1" max="65535" maxlength="5" required />
+		</div>
+		<div class="hc">
+			<label for="ip">绑定地址：</label>
+			<input id="ip" class="g dark" type="text" name="ip" placeholder="ANY" maxlength="32" title="未指定时监听所有网络地址" />
+		</div>
+		<div class="hc">
+			<label for="backlog">连接队列：</label>
+			<input id="backlog" class="g dark" type="number" name="backlog" min="1" max="65535" maxlength="4" placeholder="默认" title="Socket.backlog" />
+		</div>
+		<div class="hc">
+			<label for="access">访问日志：</label>
+			<input id="access" class="g dark" type="text" name="access" maxlength="64" placeholder="不记录" title="相对路径为程序目录" />
+		</div>
+		<div class="tr">
+			<button class="secondary" type="reset" formnovalidate>取消</button>
+			<button class="primary" type="submit">修改</button>
+		</div>
+	</form>
+</dialog>

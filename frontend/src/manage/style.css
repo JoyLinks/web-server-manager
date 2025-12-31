@@ -51,8 +51,8 @@ aside .t {
 /*
 服务器和虚拟主机为2级
 */
-aside .servers.selected .select>.t,
-aside .servers.selected .select>div>.t {
+aside .servers.selected .selec>.t,
+aside .servers.selected .selec>div>.t {
 	display: block;
 }
 

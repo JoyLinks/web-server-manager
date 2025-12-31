@@ -39,21 +39,21 @@ eno.bind("aside", "#servers", "click",
 				// 服务器一定有端口
 				if (entity.port) {
 					server.show(entity, settingRefresh);
-					eno.toggle(element, "select", "hover");
+					eno.toggle(element, "selec", "hover");
 
 					// 隐藏子元素选中标记
-					let host = eno.select(element, ".hosts .select");
+					let host = eno.select(element, ".hosts .selec");
 					if (host) {
-						host.classList.remove("select");
+						host.classList.remove("selec");
 						host.classList.add("hover");
 					}
 				} else {
 					let hosts = element.parentElement;
 					host.show(eno.entity(hosts), entity, settingRefresh);
-					eno.toggle(element, "select", "hover");
+					eno.toggle(element, "selec", "hover");
 
 					// 切换服务器标记
-					hosts.parentElement.classList.remove("select");
+					hosts.parentElement.classList.remove("selec");
 					hosts.parentElement.classList.add("hover");
 				}
 			}

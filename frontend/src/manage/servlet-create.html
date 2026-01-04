@@ -1,8 +1,6 @@
 <dialog class="w38 ssm sy" aria-modal="true">
 	<div class="head hc hms ps">
-		<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-			<use xlink:href="#i-host" />
-		</svg>
+		<i class="bi-puzzle"></i>
 		<span case="black">新建服务程序</span>
 	</div>
 	<form class="vms pm" method="dialog">
@@ -11,9 +9,11 @@
 			<select id="type" class="g dark" type="text" name="type" list="types" required>
 				<option value="RESOURCE">资源服务(RESOURCE)</option>
 				<option value="WEBDAV">文件服务(WEBDAV)</option>
+				<option value="ARCHIVE">归档服务(ARCHIVE)</option>
 				<option value="LOCATION">重定向(LOCATION)</option>
 				<optgroup label="管理服务">
 					<option value="SETTING">服务配置(SETTING)</option>
+					<option value="ARCHIVES">归档状态(ARCHIVES)</option>
 					<option value="VISITS">访问计数(VISITS)</option>
 					<option value="ROSTER">黑白名单(ROSTER)</option>
 					<option value="USER">用户账户(USER)</option>

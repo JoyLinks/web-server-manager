@@ -2,53 +2,39 @@
 	<div class="head v vm1">
 		<div class="title hc hmm ps">
 			<div class="g hc hms t3">
-				<svg width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-server" />
-				</svg>
+				<i class="bi-globe2"></i>
 				<span name="name"></span>
 			</div>
 			<mark id="apply" class="hc hms primary hover">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-apply" />
-				</svg>
+				<i class="bi-upload"></i>
 				<span>应用</span>
 			</mark>
 		</div>
-		<nav class="h hmm">
+		<nav class="hc hmm">
 			<div class="hc hms ps hover" target="#server">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-server" />
-				</svg>
+				<i class="bi-globe2"></i>
 				<span>主服务</span>
 			</div>
 			<div id="hs" class="hc hms ps hover" target="#hosts">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-host" />
-				</svg>
+				<i class="bi-cloud"></i>
 				<span>虚拟主机</span>
 				<span name="hosts"></span>
 			</div>
 			<div class="hc hms ps hover" target="#servlets">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-servlet" />
-				</svg>
+				<i class="bi-puzzle"></i>
 				<span>服务程序</span>
 				<span name="servlets"></span>
 			</div>
 			<div class="hc hms ps hover" target="#authentications">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-auth" />
-				</svg>
+				<i class="bi-shield-lock"></i>
 				<span>身份验证</span>
 				<span name="authentications"></span>
 			</div>
 			<div class="g"></div>
-			<div id="create" class="hc ps hover">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-create" />
-				</svg>
+			<mark id="create" class="primary hover">
+				<i class="bi-plus"></i>
 				<span>新建</span>
-			</div>
+			</mark>
 		</nav>
 	</div>
 	<div>
@@ -84,72 +70,50 @@
 			<div class="item hc hms">
 				<span>运行状态：</span>
 				<span name="state"></span>
-				<svg class="hover" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16" case="sp">
-					<use id="stop" xlink:href="#i-stop" />
-					<use id="play" xlink:href="#i-play" />
-				</svg>
 			</div>
 			<div class="hc hml ps">
 				<a id="modify" class="hc hms text primary hover">
-					<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-						<use xlink:href="#i-set" />
-					</svg>
+					<i class="bi-gear"></i>
 					<span>设置</span>
 				</a>
 				<a id="delete" class="hc hms text danger hover">
-					<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-						<use xlink:href="#i-delete" />
-					</svg>
+					<i class="bi-trash"></i>
 					<span>删除</span>
 				</a>
 			</div>
 		</div>
 		<div id="hosts">
 			<div class="hc hms ps item hover">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-host" />
-				</svg>
+				<i class="bi-cloud"></i>
 				<span class="w10" name="name"></span>
 				<span class="g" name="names"></span>
-				<svg class="hover" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16" target="delete">
-					<use xlink:href="#i-delete" />
-				</svg>
+				<i class="bi-trash hover" target="delete"></i>
 			</div>
 		</div>
 		<div id="servlets">
 			<div class="hc hms ps item hover">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-servlet" />
-				</svg>
+				<i class="bi-puzzle"></i>
 				<span class="w10" name="type"></span>
 				<span class="g" name="path"></span>
 				<div class="g">
 					<a case="folder" target="folder">
-						<svg class="hover" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-							<use xlink:href="#i-folder" />
-						</svg>
+						<i class="bi-folder"></i>
 						<span name="parameters.content"></span>
 					</a>
 					<span name="parameters.location"></span>
 				</div>
-				<svg class="hover" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16" target="delete">
-					<use xlink:href="#i-delete" />
-				</svg>
+				<i class="bi-trash hover" target="delete"></i>
 			</div>
 		</div>
 		<div id="authentications">
 			<div class="hc hms ps item hover">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-auth" />
-				</svg>
+				<i class="bi-shield-lock"></i>
 				<span class="w10" name="type"></span>
 				<span class="w15" name="realm"></span>
 				<span class="g" name="path"></span>
 				<span name="methods"></span>
 				<span name="algorithm"></span>
-				<svg class="hover" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16" target="delete">
-					<use xlink:href="#i-delete" />
-				</svg>
+				<i class="bi-trash hover" target="delete"></i>
 			</div>
 		</div>
 	</div>

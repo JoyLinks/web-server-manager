@@ -2,8 +2,9 @@ import './style.css';
 import "@joyzl/style";
 
 import eno from "@joyzl/eno";
-import manage from 'components/manage';
 import alert from 'components/alert';
+import manage from 'components/manage';
+import archive from './archive.js';
 import visits from './visits.js';
 import roster from './roster.js';
 import users from './users.js';
@@ -13,7 +14,7 @@ import server from './server.js';
 import create from './server-create.js';
 import host from './host.js';
 
-manage.url("/manage/api/");
+manage.url("http://127.0.0.1/manage/api/");
 manage.settingGet(
 	function(servers) {
 		settingRefresh();
@@ -58,6 +59,12 @@ eno.bind("aside", "#servers", "click",
 				}
 			}
 		}
+	}
+);
+eno.bind("aside", "#archive", "click",
+	function(event) {
+		eno.toggle(this, "selected", "hover");
+		archive.show();
 	}
 );
 eno.bind("aside", "#visits", "click",

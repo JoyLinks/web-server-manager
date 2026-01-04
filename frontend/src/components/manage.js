@@ -4,7 +4,7 @@ import axios from 'axios';
 
 let SERVERS, ROSTER, USERS;
 let ORIGINAL_SERVERS;
-
+let ORIGIN;
 // 
 export default {
 	url: function(base) {
@@ -12,6 +12,8 @@ export default {
 			return axios.defaults.baseURL;
 		} else {
 			axios.defaults.baseURL = base;
+			const url = new URL(base);
+			ORIGIN = url.origin;
 		}
 	},
 	servers: function() {
@@ -227,10 +229,52 @@ export default {
 		}).catch(function(e) {
 			if (error) error(e.message);
 		});
-	}
-}
+	},
 
-axios.defaults.baseURL = "/manage/api/";
+	/**从服务器获取创建的归档库*/
+	archives: function(success, error) {
+		requestParam("POST", "archives").then(function(response) {
+			if (success) success(response.data);
+		}).catch(function(e) {
+			if (error) error(e.message);
+		});
+	},
+	/**获取指定归档库目录集*/
+	archiveDirs: function(id, success, error) {
+		requestParam("POST", "archives", {
+			"id": id
+		}).then(function(response) {
+			if (success) success(response.data);
+		}).catch(function(e) {
+			if (error) error(e.message);
+		});
+	},
+	/**获取指定归档库和目录的编号集*/
+	archivePackets: function(id, name, success, error) {
+		requestParam("POST", "archives", {
+			"id": id,
+			"name": name
+		}).then(function(response) {
+			if (success) success(response.data);
+		}).catch(function(e) {
+			if (error) error(e.message);
+		});
+	},
+	/**获取指定编号的文件集*/
+	archiveFiles: function(uri, code, success, error) {
+		requestParam("GET", ORIGIN + uri, {
+			"code": code
+		}).then(function(response) {
+			if (success) success(response.data);
+		}).catch(function(e) {
+			if (error) error(e.message);
+		});
+	},
+	/**获取指归档件URL*/
+	archiveFileURL: function(uri, code, name) {
+		return ORIGIN + uri + code + "/" + name;
+	},
+}
 
 function request(method, uri, data) {
 	return axios({
@@ -243,6 +287,21 @@ function request(method, uri, data) {
 		},
 		timeout: 6000,
 		// 如果请求体为null那么"Content-Type"也不会发出
+		data: data ? data : ""
+	});
+}
+
+function requestParam(method, uri, data) {
+	return axios({
+		url: uri,
+		method: method,
+		responseType: 'json',
+		withCredentials: true,
+		headers: {
+			"Content-Type": 'application/x-www-form-urlencoded'
+		},
+		timeout: 6000,
+		params: method == "GET" ? data : null,
 		data: data ? data : ""
 	});
 }

@@ -7,26 +7,20 @@
 	</head>
 	<body>
 		<aside class="v">
-			<div class="head hc hms ps t3">
-				<svg width="1.5rem" height="1.5rem" fill="currentColor" viewBox="0 0 16 16">
-					<path d="M5 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H5Zm.5 14a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1Zm2 0a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1ZM5 1.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5ZM5.5 3h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1Z" />
-				</svg>
+			<div id="about" class="head hc hms ps t3">
+				<i class="bi-pc"></i>
 				<span>JOYZL Server</span>
 			</div>
 			<div id="servers" class="g servers sy">
 				<div class="v vm1 hover">
 					<div class="hc hms ps">
-						<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-							<use xlink:href="#i-server" />
-						</svg>
+						<i class="bi-globe2"></i>
 						<span class="g" name="name"></span>
 						<span class="t">•</span>
 					</div>
 					<div class="hosts" name="hosts">
 						<div class="hc hms ps hover">
-							<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-								<use xlink:href="#i-host" />
-							</svg>
+							<i class="bi-cloud"></i>
 							<span class="g" name="name"></span>
 							<span class="t">•</span>
 						</div>
@@ -34,39 +28,32 @@
 				</div>
 			</div>
 			<div id="create" class="hc hms ps hover">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-create" />
-				</svg>
+				<i class="bi-globe2"></i>
 				<span class="g">新建主服务</span>
 			</div>
 			<div id="visits" class="hc hms ps hover">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-visits" />
-				</svg>
+				<i class="bi-bar-chart"></i>
 				<span class="g">访问统计</span>
 				<span class="t">•</span>
 			</div>
 			<div id="roster" class="hc hms ps hover">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-black" />
-				</svg>
+				<i class="bi-x-circle"></i>
 				<span class="g">黑白名单</span>
 				<span class="t">•</span>
 			</div>
-			<div id="users" class="hc hms ps hover">
-				<svg width="1rem" height="1rem" fill="currentColor" viewBox="0 0 16 16">
-					<use xlink:href="#i-user" />
-				</svg>
-				<span class="g">用户</span>
+			<div id="archive" class="hc hms ps hover">
+				<i class="bi-archive"></i>
+				<span class="g">归档库</span>
 				<span class="t">•</span>
 			</div>
-			<div id="about" class="ps text hover">
-				<span>　</span>
-				<span>…</span>
+			<div id="users" class="hc hms ps hover">
+				<i class="bi-person"></i>
+				<span class="g">用户</span>
+				<span class="t">•</span>
 			</div>
 			<div class="ps"></div>
 		</aside>
 		<main></main>
-		<include src="svg.html" />
+		<!-- <include src="svg.html" /> -->
 	</body>
 </html>

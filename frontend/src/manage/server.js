@@ -185,19 +185,6 @@ function serverConvert(tag, entity, name) {
 			return "任何";
 		}
 	}
-	if ("sp" == name) {
-		if (entity.state) {
-			tag.classList.add("text", "danger");
-			tag.classList.remove("success");
-			eno.show(tag, "#stop");
-			eno.hide(tag, "#play");
-		} else {
-			tag.classList.add("text", "success");
-			tag.classList.remove("danger");
-			eno.hide(tag, "#stop");
-			eno.show(tag, "#play");
-		}
-	}
 	if ("state" == name) {
 		if (entity.state) {
 			return "运行";

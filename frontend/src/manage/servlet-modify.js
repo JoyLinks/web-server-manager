@@ -78,10 +78,14 @@ function typeText(type) {
 			return "资源服务(RESOURCE)";
 		case "WEBDAV":
 			return "文件服务(WEBDAV)";
+		case "ARCHIVE":
+			return "归档服务(ARCHIVE)";
 		case "LOCATION":
 			return "重定向(LOCATION)";
 		case "SETTING":
 			return "服务配置(SETTING)";
+		case "ARCHIVES":
+			return "归档状态(ARCHIVES)";
 		case "VISITS":
 			return "访问计数(VISITS)";
 		case "ROSTER":

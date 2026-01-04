@@ -68,6 +68,25 @@
 		<label for="allProperty">允许读取系统支持的所有文件属性</label>
 	</div>
 </fieldset>
+<fieldset class="vms" id="ARCHIVE">
+	<legend>归档服务</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="*" />
+	</div>
+	<div style="padding-left:6rem;">
+		<small>可使用单个通配符'*'，未设置时匹配所有路径。</small>
+	</div>
+	<div class="hc">
+		<label for="content">文件目录：</label>
+		<input id="content" class="g dark" type="text" name="content" maxlength="256" required title="文件所在目录" />
+	</div>
+	<div class="hc">
+		<label for="expire">过期天数：</label>
+		<input id="expire" class="dark" type="number" name="expire" />
+		<label for="expire">过期文件将被自动清理</label>
+	</div>
+</fieldset>
 <fieldset class="vms" id="LOCATION">
 	<legend>重定向</legend>
 	<div class="hc">
@@ -97,6 +116,13 @@
 	<div class="hc">
 		<label for="path">访问路径：</label>
 		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="/manage/api/setting" />
+	</div>
+</fieldset>
+<fieldset class="vms" id="ARCHIVES">
+	<legend>归档状态</legend>
+	<div class="hc">
+		<label for="path">访问路径：</label>
+		<input id="path" class="g dark" type="text" name="path" maxlength="256" placeholder="/manage/api/archives" />
 	</div>
 </fieldset>
 <fieldset class="vms" id="VISITS">

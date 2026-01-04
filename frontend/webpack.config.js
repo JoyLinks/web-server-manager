@@ -31,7 +31,7 @@ module.exports = {
 			chunks: ['manage']
 		}),
 		new HtmlWebpackPlugin({
-			title: 'MOBILE',
+			title: 'WEBDAV',
 			template: 'src/webdav/index.html',
 			filename: 'webdav.html',
 			chunks: ['webdav']

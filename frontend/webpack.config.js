@@ -11,7 +11,6 @@ module.exports = {
 	entry: {
 		manage: './src/manage/index.js',
 		webdav: './src/webdav/index.js',
-		index: './src/index.js'
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
@@ -35,12 +34,6 @@ module.exports = {
 			template: 'src/webdav/index.html',
 			filename: 'webdav.html',
 			chunks: ['webdav']
-		}),
-		new HtmlWebpackPlugin({
-			title: 'INDEX',
-			template: 'src/index.html',
-			filename: 'index.html',
-			chunks: ['index']
 		})
 	],
 	output: {
